@@ -113,7 +113,7 @@
 <meta property="og:image" content="http://yoursite.com/2016/03/01/FreeMarker模板基本语法/1-23.png">
 <meta property="og:image" content="http://yoursite.com/2016/03/01/FreeMarker模板基本语法/1-24.png">
 <meta property="og:image" content="http://yoursite.com/2016/03/01/FreeMarker模板基本语法/1-25.png">
-<meta property="og:updated_time" content="2016-04-24T02:50:50.723Z">
+<meta property="og:updated_time" content="2016-04-27T05:54:23.187Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FreeMarker模板基本语法">
 <meta name="twitter:description" content="Freemarker&amp;#x6A21;&amp;#x677F;&amp;#x5B66;&amp;#x4E60;&amp;#x7B14;&amp;#x8BB0;&amp;#x4E00;
@@ -403,6 +403,8 @@
 <h3 id="eval"><a href="#eval" class="headerlink" title="eval"></a><strong>eval</strong></h3><p>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;ftl&#x6A21;&#x677F;&#x8F93;&#x51FA;&#xFF0C;&#x5C31;&#x548C;javascript&#x539F;&#x751F;&#x7684;eval&#x6709;&#x70B9;&#x7C7B;&#x4F3C;&#x3002;</p>
 <p>&#x7528;&#x6CD5;&#x4E3E;&#x4F8B;&#xFF1A;</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">${(col[&apos;name&apos;]?eval)}</span><br></pre></td></tr></table></figure>
+<p>&#x53EF;&#x4EE5;&#x591A;&#x4E2A;&#x51FD;&#x6570;&#x8FDE;&#x7740;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF1A;</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">#assign</span> <span class="attr">jrqf</span>=<span class="string">jrqf?default(</span>&apos;{}&apos;)?<span class="attr">eval</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="&#x63D2;&#x503C;"><a href="#&#x63D2;&#x503C;" class="headerlink" title="&#x63D2;&#x503C;"></a><strong>&#x63D2;&#x503C;</strong></h2><p>&#x4F7F;&#x7528;&#x573A;&#x666F;&#x5206;&#x4E3A;<strong>&#x6587;&#x672C;&#x533A;</strong>&#x548C;<strong>&#x5B57;&#x7B26;&#x4E32;&#x8868;&#x8FBE;&#x5F0F;</strong>&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;Hello ${name}!&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">&lt;#include &quot;/footer/${company}.html&quot;&gt;</span><br></pre></td></tr></table></figure></p>
 <p>&#x6240;&#x4EE5;&#x8BF4;&#xFF0C;&#x4E0D;&#x8981;&#x5728;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x63D2;&#x503C;&#x7684;&#x5730;&#x65B9;&#x4F7F;&#x7528;&#x5B83;&#xFF01;&#xFF01;&#xFF01;&#x6BD4;&#x5982;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;#if ${isBig}&gt;WOW!&lt;/#if&gt;</span><br></pre></td></tr></table></figure></p>
@@ -579,7 +581,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">70</span>
+              <span class="site-state-item-count">71</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
