@@ -12,7 +12,7 @@
 	};
 
 	var pro = MyFullPage.prototype;
-	
+
 	pro.initFullPage = function(){
 		this.setDomInfo();
 		this.setDomStyle();
@@ -28,6 +28,7 @@
 	}	
 	/*构造相关样式*/
 	pro.setDomStyle = function(){
+		var _interval = this.options.interval/1000;
 		this.$element.css({
 			'position':'fixed',
 			'top':0,
@@ -39,7 +40,7 @@
 		});
 		this.parentNode.css({
 			'display':'none',
-			'transition':'all ease 1s'
+			'transition':'all ease '+_interval+'s'
 		});
 
 		this.height = this.$element.height();
