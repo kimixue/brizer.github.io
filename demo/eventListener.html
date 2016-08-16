@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>观察者</title>		
+<script type="text/javascript" src="./js/util.js"></script>   
 </head>
 <body>
 </body>
@@ -57,10 +58,10 @@ var Event = (function(){
 })();	
 /*随机触发20次事件，给两个watcher*/
 Event.listen('WatcherA',function(a){
-    document.write('发送给WatcherA的：'+a+'<br/>');
+    Util.dw('发送给WatcherA的：'+a);
 });
 Event.listen('WatcherB',function(a){
-    document.write('发送给WatcherB的：'+a+'<br/>');
+    Util.dw('发送给WatcherB的：'+a);
 });  
     
 var i = 0;
