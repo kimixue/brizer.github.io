@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.0/jquery.js"></script> 
+<style type="text/css">
+.m-pool {
+	display:inline-block;
+}
+.u-content {
+	overflow:hidden;
+	height:100px;
+}
+.lists {
+	height:200px;
+}
+.list {
+	width:100px;
+	height:20px;
+	text-align: center;
+}
+.list:nth-of-type(2n+1){
+	background-color:yellow;
+}
+.list:nth-of-type(2n){
+	background-color:blue;
+}
+</style>
+	</head>
+	<body>
+	<div class="m-pool">
+		<div class="u-content">
+			<div class="j-lists lists">
+				<div class="list">1</div>
+				<div class="list">2</div>
+				<div class="list">3</div>
+				<div class="list">4</div>
+				<div class="list">5</div>
+				<div class="list">6</div>
+				<div class="list">7</div>
+				<div class="list">8</div>
+				<div class="list">9</div>
+				<div class="list">10</div>
+				<div class="list">11</div>
+				<div class="list">12</div>
+				<div class="list">13</div>
+				<div class="list">14</div>
+				<div class="list">15</div>
+				<div class="list">16</div>
+				<div class="list">17</div>
+				<div class="list">18</div>
+				<div class="list">19</div>
+				<div class="list">20</div>
+			</div>
+		</div>
+	</div>
+<script>
+	var $list = $('j-lists');
+    var marginTop = 0;
+    function setAnimate(){
+        if(marginTop != (-600)){
+            marginTop--;
+            $list.css('marginTop',marginTop);
+            setTimeout(setAnimate,1000/60);  
+        }else{
+            marginTop = 0;
+            setTimeout(setAnimate,1000/60); 
+        }
+    }
+    setAnimate();	
+</script>	
+	</body>
+</html>
