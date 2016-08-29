@@ -13,7 +13,7 @@
 	height:100px;
 }
 .lists {
-	height:200px;
+	position:relative;
 }
 .list {
 	width:100px;
@@ -30,8 +30,8 @@
 	</head>
 	<body>
 	<div class="m-pool">
-		<div class="u-content">
-			<div class="j-lists lists">
+		<div class="j-content u-content">
+			<div class="j-lists1 lists">
 				<div class="list">1</div>
 				<div class="list">2</div>
 				<div class="list">3</div>
@@ -53,22 +53,74 @@
 				<div class="list">19</div>
 				<div class="list">20</div>
 			</div>
+			<div class="j-lists2 lists">
+				<div class="list">1</div>
+				<div class="list">2</div>
+				<div class="list">3</div>
+				<div class="list">4</div>
+				<div class="list">5</div>
+				<div class="list">6</div>
+				<div class="list">7</div>
+				<div class="list">8</div>
+				<div class="list">9</div>
+				<div class="list">10</div>
+				<div class="list">11</div>
+				<div class="list">12</div>
+				<div class="list">13</div>
+				<div class="list">14</div>
+				<div class="list">15</div>
+				<div class="list">16</div>
+				<div class="list">17</div>
+				<div class="list">18</div>
+				<div class="list">19</div>
+				<div class="list">20</div>
+			</div>			
 		</div>
 	</div>
 <script>
-	var $list = $('j-lists');
-    var marginTop = 0;
-    function setAnimate(){
-        if(marginTop != (-600)){
-            marginTop--;
-            $list.css('marginTop',marginTop);
-            setTimeout(setAnimate,1000/60);  
+	var $content = $('.j-content');
+	var $list1 = $('.j-lists1');
+	var $list2 = $('.j-lists2');
+    var _top = 0;
+    var _top2 = 0;
+    var _ani1;
+    var _ani2;
+    function setAnimate1(){
+        if(_top != -400){
+            _top = _top-0.5;
+            $list1.css('top',_top);
+            _ani1 =  setTimeout(setAnimate1,1000/60);  
         }else{
-            marginTop = 0;
-            setTimeout(setAnimate,1000/60); 
+            _top = 0;
+            _ani1 = setTimeout(setAnimate1,1000/60); 
         }
     }
+    function setAnimate2(){
+    	if(_top2 != -400){
+            _top2 = _top2-0.5;
+            $list2.css('top',_top2);
+            _ani2 = setTimeout(setAnimate2,1000/60);    		
+    	} else {
+    		_top2 = 0;
+            _ani2 = setTimeout(setAnimate2,1000/60);    		
+    	}
+    }
+    function stopAnimate(){
+    	clearTimeout(_ani1);
+    	clearTimeout(_ani2);
+    }
+    function setAnimate(){
+    	setAnimate1();
+    	setAnimate2();
+    }
+    $content.on('mouseover',function(){
+    	stopAnimate();
+    });
+    $content.on('mouseleave',function(){
+    	setAnimate();
+    });
     setAnimate();	
+    
 </script>	
 	</body>
 </html>
